@@ -10,7 +10,7 @@ importers:
 
   packages/backend:
     specifiers:
-      '@doubleshot/builder': 0.1.0-alpha.3
+      '@doubleshot/builder': 0.1.0-alpha.4
       '@doubleshot/nest-electron': 0.1.0-alpha.3
       '@doubleshot/nest-electron-ipc-transport': 0.1.0-alpha.3
       '@nestjs/common': ^9.0.5
@@ -31,7 +31,7 @@ importers:
       reflect-metadata: 0.1.13
       rxjs: 7.5.6
     devDependencies:
-      '@doubleshot/builder': 0.1.0-alpha.3_sqgnxnnwrb5hkzqcfw7j2sxt6i
+      '@doubleshot/builder': 0.1.0-alpha.4_sqgnxnnwrb5hkzqcfw7j2sxt6i
       '@types/node': 18.0.6
       electron: 19.0.9
       electron-builder: 23.1.0
@@ -84,12 +84,12 @@ packages:
       ajv-keywords: 3.5.2_ajv@6.12.6
     dev: true
 
-  /@doubleshot/builder/0.1.0-alpha.3_sqgnxnnwrb5hkzqcfw7j2sxt6i:
-    resolution: {integrity: sha512-KKvd1Px05QqT2a4yfGu2kRe8oG3CYb3jH89NxvEj3Dfe6waI8pRe53xis/HmKtJ8QjJ528TBP5JU7wwdPUwA+w==}
+  /@doubleshot/builder/0.1.0-alpha.4_sqgnxnnwrb5hkzqcfw7j2sxt6i:
+    resolution: {integrity: sha512-gi7SL9KfaKbYhf3Iusx2ZH2unbYpgh1exPkdYLO7vfmFyMVyHz/8U32GQO2xf0tScimCrz+7it093gsvDE/yCA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     peerDependencies:
-      electron: ^19.0.4
+      electron: ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
       electron-builder: ^23.0.3
     peerDependenciesMeta:
       electron:

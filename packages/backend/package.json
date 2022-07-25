@@ -17,7 +17,7 @@
     "rxjs": "^7.5.6"
   },
   "devDependencies": {
-    "@doubleshot/builder": "0.1.0-alpha.3",
+    "@doubleshot/builder": "0.1.0-alpha.4",
     "@types/node": "18.0.6",
     "electron": "19.0.9",
     "electron-builder": "23.1.0",
