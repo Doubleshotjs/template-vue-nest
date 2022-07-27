@@ -25,10 +25,7 @@ const config = {
       from: resolve('packages/frontend/dist'),
       to: 'frontend',
     },
-  ],
-  win: {
-    target: 'dir'
-  }
+  ]
 }
 
 module.exports = config

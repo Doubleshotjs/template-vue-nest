@@ -12,11 +12,11 @@ importers:
     specifiers:
       '@doubleshot/builder': 0.1.0-alpha.4
       '@doubleshot/nest-electron': 0.1.0-alpha.3
-      '@doubleshot/nest-electron-ipc-transport': 0.1.0-alpha.3
+      '@doubleshot/nest-electron-ipc-transport': 0.1.0-alpha.5
       '@nestjs/common': ^9.0.5
       '@nestjs/core': ^9.0.5
       '@nestjs/microservices': ^9.0.5
-      '@types/node': 18.0.6
+      '@types/node': 18.6.1
       electron: 19.0.9
       electron-builder: 23.1.0
       reflect-metadata: ^0.1.13
@@ -24,7 +24,7 @@ importers:
       typescript: 4.7.4
     dependencies:
       '@doubleshot/nest-electron': 0.1.0-alpha.3_idgsrzt3qvuyqyq65eqc3gj2gm
-      '@doubleshot/nest-electron-ipc-transport': 0.1.0-alpha.3_6rzyk7c6deetajy2thtxrtwzqm
+      '@doubleshot/nest-electron-ipc-transport': 0.1.0-alpha.5_6rzyk7c6deetajy2thtxrtwzqm
       '@nestjs/common': 9.0.5_j5hagqx4mwzscud4kyjdvubauy
       '@nestjs/core': 9.0.5_j64r5jvz6u4u7g4ymewfyvw2zq
       '@nestjs/microservices': 9.0.5_ysglbtvsggaxflvnan6dc2nlve
@@ -32,7 +32,7 @@ importers:
       rxjs: 7.5.6
     devDependencies:
       '@doubleshot/builder': 0.1.0-alpha.4_sqgnxnnwrb5hkzqcfw7j2sxt6i
-      '@types/node': 18.0.6
+      '@types/node': 18.6.1
       electron: 19.0.9
       electron-builder: 23.1.0
       typescript: 4.7.4
@@ -41,15 +41,15 @@ importers:
     specifiers:
       '@vitejs/plugin-vue': ^3.0.1
       typescript: ^4.7.4
-      vite: ^3.0.2
+      vite: ^3.0.3
       vue: ^3.2.37
       vue-tsc: ^0.39.0
     dependencies:
       vue: 3.2.37
     devDependencies:
-      '@vitejs/plugin-vue': 3.0.1_vite@3.0.2+vue@3.2.37
+      '@vitejs/plugin-vue': 3.0.1_vite@3.0.3+vue@3.2.37
       typescript: 4.7.4
-      vite: 3.0.2
+      vite: 3.0.3
       vue-tsc: 0.39.0_typescript@4.7.4
 
 packages:
@@ -117,8 +117,8 @@ packages:
       - typescript
     dev: true
 
-  /@doubleshot/nest-electron-ipc-transport/0.1.0-alpha.3_6rzyk7c6deetajy2thtxrtwzqm:
-    resolution: {integrity: sha512-cuXCzoRI172Xsvooja7Tg+z6hrjCOrCqO6glUl48A6gguIM0oCwAL7CZIRZ2xi2v10tFPbt+jd6iLrsJhhDwdA==}
+  /@doubleshot/nest-electron-ipc-transport/0.1.0-alpha.5_6rzyk7c6deetajy2thtxrtwzqm:
+    resolution: {integrity: sha512-fKDNaZeEoQ7/3yeH0lS6E0pat07GGW+gBf5YoNslDG/rNwx47rVgZQv2T21VYfWJhbKHTgzEsO3tjuK27XccMw==}
     peerDependencies:
       '@nestjs/common': ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
       '@nestjs/microservices': ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
@@ -529,7 +529,7 @@ packages:
   /@types/fs-extra/9.0.13:
     resolution: {integrity: sha512-nEnwB++1u5lVDM2UI4c1+5R+FYaKfaAzS4OococimjVm3nQw3TuzH5UNsocrcTBbhnerblyHj4A49qXbIiZdpA==}
     dependencies:
-      '@types/node': 18.0.6
+      '@types/node': 18.6.1
     dev: true
 
   /@types/glob/7.2.0:
@@ -537,14 +537,14 @@ packages:
     requiresBuild: true
     dependencies:
       '@types/minimatch': 3.0.5
-      '@types/node': 18.0.6
+      '@types/node': 18.6.1
     dev: true
     optional: true
 
   /@types/keyv/3.1.4:
     resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
     dependencies:
-      '@types/node': 18.0.6
+      '@types/node': 18.6.1
 
   /@types/minimatch/3.0.5:
     resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
@@ -558,14 +558,14 @@ packages:
   /@types/node/16.11.45:
     resolution: {integrity: sha512-3rKg/L5x0rofKuuUt5zlXzOnKyIHXmIu5R8A0TuNDMF2062/AOIDBciFIjToLEJ/9F9DzkHNot+BpNsMI1OLdQ==}
 
-  /@types/node/18.0.6:
-    resolution: {integrity: sha512-/xUq6H2aQm261exT6iZTMifUySEt4GR5KX8eYyY+C4MSNPqSh9oNIP7tz2GLKTlFaiBbgZNxffoR3CVRG+cljw==}
+  /@types/node/18.6.1:
+    resolution: {integrity: sha512-z+2vB6yDt1fNwKOeGbckpmirO+VBDuQqecXkgeIqDlaOtmKn6hPR/viQ8cxCfqLU4fTlvM3+YjM367TukWdxpg==}
 
   /@types/plist/3.0.2:
     resolution: {integrity: sha512-ULqvZNGMv0zRFvqn8/4LSPtnmN4MfhlPNtJCTpKuIIxGVGZ2rYWzFXrvEBoh9CVyqSE7D6YFRJ1hydLHI6kbWw==}
     requiresBuild: true
     dependencies:
-      '@types/node': 18.0.6
+      '@types/node': 18.6.1
       xmlbuilder: 15.1.1
     dev: true
     optional: true
@@ -573,7 +573,7 @@ packages:
   /@types/responselike/1.0.0:
     resolution: {integrity: sha512-85Y2BjiufFzaMIlvJDvTTB8Fxl2xfLo4HgmHzVBz08w4wDePCTjYw66PdrolO0kzli3yam/YCgRufyo1DdQVTA==}
     dependencies:
-      '@types/node': 18.0.6
+      '@types/node': 18.6.1
 
   /@types/verror/1.10.6:
     resolution: {integrity: sha512-NNm+gdePAX1VGvPcGZCDKQZKYSiAWigKhKaz5KF94hG6f2s8de9Ow5+7AbXoeKxL8gavZfk4UquSAygOF2duEQ==}
@@ -591,14 +591,14 @@ packages:
       '@types/yargs-parser': 21.0.0
     dev: true
 
-  /@vitejs/plugin-vue/3.0.1_vite@3.0.2+vue@3.2.37:
+  /@vitejs/plugin-vue/3.0.1_vite@3.0.3+vue@3.2.37:
     resolution: {integrity: sha512-Ll9JgxG7ONIz/XZv3dssfoMUDu9qAnlJ+km+pBA0teYSXzwPCIzS/e1bmwNYl5dcQGs677D21amgfYAnzMl17A==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       vite: ^3.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 3.0.2
+      vite: 3.0.3
       vue: 3.2.37
     dev: true
 
@@ -3188,8 +3188,8 @@ packages:
     dev: true
     optional: true
 
-  /vite/3.0.2:
-    resolution: {integrity: sha512-TAqydxW/w0U5AoL5AsD9DApTvGb2iNbGs3sN4u2VdT1GFkQVUfgUldt+t08TZgi23uIauh1TUOQJALduo9GXqw==}
+  /vite/3.0.3:
+    resolution: {integrity: sha512-sDIpIcl3mv1NUaSzZwiXGEy1ZoWwwC2vkxUHY6yiDacR6zf//ZFuBJrozO62gedpE43pmxnLATNR5IYUdAEkMQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
