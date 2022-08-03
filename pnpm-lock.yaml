@@ -4,9 +4,9 @@ importers:
 
   .:
     specifiers:
-      '@doubleshot/runner': 0.1.0-alpha.3
+      '@doubleshot/runner': 0.1.0-beta.0
     devDependencies:
-      '@doubleshot/runner': 0.1.0-alpha.3
+      '@doubleshot/runner': 0.1.0-beta.0
 
   packages/backend:
     specifiers:
@@ -139,12 +139,12 @@ packages:
       electron: 19.0.9
     dev: false
 
-  /@doubleshot/runner/0.1.0-alpha.3:
-    resolution: {integrity: sha512-hwDpCVXxwMFpcd37PB36hoZ/0cDl4I3MIb9HmH9ckNM7fIXPSYAdjHtvfse131bovy/JZcH0+2h+iBXmf4eoVA==}
+  /@doubleshot/runner/0.1.0-beta.0:
+    resolution: {integrity: sha512-VMuEphAf9t845dMF5jofKZwKx7E2Qvtuf//55kSOwivqhSwOzrCxXnKrPxoFPM55IfHWIeqm1MDoQojI7fvUHA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     peerDependencies:
-      electron-builder: ^23.0.3
+      electron-builder: '>=20.0.0'
     peerDependenciesMeta:
       electron-builder:
         optional: true
