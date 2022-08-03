@@ -8,19 +8,19 @@
     "build": "dsb build -t electron"
   },
   "dependencies": {
-    "@doubleshot/nest-electron": "0.1.0-alpha.3",
-    "@doubleshot/nest-electron-ipc-transport": "0.1.0-alpha.5",
-    "@nestjs/common": "^9.0.5",
-    "@nestjs/core": "^9.0.5",
-    "@nestjs/microservices": "^9.0.5",
+    "@doubleshot/nest-electron": "0.1.0-beta.0",
+    "@doubleshot/nest-electron-ipc-transport": "0.1.0-beta.0",
+    "@nestjs/common": "^9.0.7",
+    "@nestjs/core": "^9.0.7",
+    "@nestjs/microservices": "^9.0.7",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.5.6"
   },
   "devDependencies": {
-    "@doubleshot/builder": "0.1.0-alpha.4",
-    "@types/node": "18.6.1",
-    "electron": "19.0.9",
-    "electron-builder": "23.1.0",
+    "@doubleshot/builder": "0.1.0-beta.0",
+    "@types/node": "18.6.3",
+    "electron": "20.0.0",
+    "electron-builder": "23.3.3",
     "typescript": "4.7.4"
   }
 }
