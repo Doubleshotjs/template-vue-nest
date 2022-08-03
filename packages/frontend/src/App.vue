@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
 import Paint from './components/Paint.vue'
 
 if (window.isElectron) {
@@ -18,11 +17,12 @@ if (window.isElectron) {
     setZoomFactor(factor)
   }
 
-  onMounted(() => {
+  setTimeout(() => {
     updateZoomFactor()
-    window.addEventListener('resize', () => {
-      updateZoomFactor()
-    })
+  }, 200);
+
+  window.addEventListener('resize', () => {
+    updateZoomFactor()
   })
 }
 </script>
