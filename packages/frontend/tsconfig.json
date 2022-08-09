@@ -17,6 +17,7 @@
     "skipLibCheck": true
   },
   "include": [
+    "../backend/preload.d.ts",
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",
