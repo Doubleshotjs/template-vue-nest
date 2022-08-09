@@ -2,20 +2,8 @@
 import Paint from './components/Paint.vue'
 
 if (window.isElectron) {
-  // Zoom Factor
-  const { getDeviceScaleFactor, setZoomFactor } = window.electron // injected by preload
-  const DESIGN_HEIGHT = 1080
-  const DESIGN_DPR = 1
-  const DESIGN_SCALE_FACTOR = 1
-  let scaleFactor = 0
-  const updateZoomFactor = async () => {
-    const height = window.innerHeight
-    const dpr = window.devicePixelRatio
-    if (scaleFactor === 0) scaleFactor = (await getDeviceScaleFactor()).data
-
-    const factor = (height / DESIGN_HEIGHT) * (dpr / DESIGN_DPR) * (DESIGN_SCALE_FACTOR / scaleFactor)
-    setZoomFactor(factor)
-  }
+  const { useZoomFactor } = window.electron
+  const { update: updateZoomFactor } = useZoomFactor()
 
   setTimeout(() => {
     updateZoomFactor()
