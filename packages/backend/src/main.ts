@@ -1,7 +1,7 @@
 import { NestFactory } from '@nestjs/core'
 import { MicroserviceOptions } from '@nestjs/microservices'
 import { app } from 'electron'
-import { ElectronIpcTransport } from '@doubleshot/nest-electron-ipc-transport'
+import { ElectronIpcTransport } from '@doubleshot/nest-electron'
 import { AppModule } from './app.module'
 
 process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = 'true'
