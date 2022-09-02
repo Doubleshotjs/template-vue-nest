@@ -1,5 +1,5 @@
 import { Controller } from '@nestjs/common'
-import { IpcInvoke } from '@doubleshot/nest-electron-ipc-transport'
+import { IpcHandle } from '@doubleshot/nest-electron'
 import { AppService } from './app.service'
 
 @Controller()
@@ -8,12 +8,12 @@ export class AppController {
     private readonly appService: AppService
   ) { }
 
-  @IpcInvoke('device-scale-factor')
+  @IpcHandle('device-scale-factor')
   getDeviceScaleFactor() {
     return this.appService.getScaleFactor()
   }
 
-  @IpcInvoke('save-image')
+  @IpcHandle('save-image')
   saveImage(image: string) {
     return this.appService.saveImageToFile(image)
   }

@@ -1,5 +1,5 @@
 import { contextBridge, webFrame, ipcRenderer } from 'electron'
-import { IpcResponse } from '@doubleshot/nest-electron-ipc-transport'
+import { IpcResponse } from '@doubleshot/nest-electron'
 
 function getDeviceScaleFactor(): Promise<IpcResponse<number>> {
   return ipcRenderer.invoke("device-scale-factor")
