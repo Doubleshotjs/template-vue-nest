@@ -1,12 +1,12 @@
-import { ElectronService } from '@doubleshot/nest-electron'
+import { Window } from '@doubleshot/nest-electron'
 import { Injectable } from '@nestjs/common'
-import { screen, dialog } from 'electron'
+import { screen, dialog, BrowserWindow } from 'electron'
 import fs from "fs"
 
 @Injectable()
 export class AppService {
   constructor(
-    private readonly electronService: ElectronService,
+    @Window() private readonly mainWin: BrowserWindow,
   ) { }
 
   public getScaleFactor(): number {
@@ -15,9 +15,7 @@ export class AppService {
   }
 
   public async saveImageToFile(image: string) {
-    const win = this.electronService.getWindow()
-
-    const { canceled, filePath } = await dialog.showSaveDialog(win, {
+    const { canceled, filePath } = await dialog.showSaveDialog(this.mainWin, {
       title: 'Save image',
       defaultPath: 'paint.png',
       filters: [
