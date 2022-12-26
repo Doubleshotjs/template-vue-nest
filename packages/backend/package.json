@@ -13,13 +13,13 @@
     "@nestjs/core": "^9.2.1",
     "@nestjs/microservices": "^9.2.1",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.5.7"
+    "rxjs": "^7.8.0"
   },
   "devDependencies": {
     "@doubleshot/builder": "0.0.6",
-    "@types/node": "18.11.9",
+    "@types/node": "18.11.17",
     "electron": "22.0.0",
     "electron-builder": "23.6.0",
-    "typescript": "4.9.3"
+    "typescript": "4.9.4"
   }
 }

@@ -15,25 +15,25 @@ importers:
       '@nestjs/common': ^9.2.1
       '@nestjs/core': ^9.2.1
       '@nestjs/microservices': ^9.2.1
-      '@types/node': 18.11.9
+      '@types/node': 18.11.17
       electron: 22.0.0
       electron-builder: 23.6.0
       reflect-metadata: ^0.1.13
-      rxjs: ^7.5.7
-      typescript: 4.9.3
+      rxjs: ^7.8.0
+      typescript: 4.9.4
     dependencies:
       '@doubleshot/nest-electron': 0.0.5_oe663ycdao3pdiebnpicqrp2ke
-      '@nestjs/common': 9.2.1_yzt46al3aifnexifjjdb4dxxja
-      '@nestjs/core': 9.2.1_ryn35c7ur6lmhhqnj6cojrii7i
-      '@nestjs/microservices': 9.2.1_4lvhvnmmva5aaajgnpoz6utxby
+      '@nestjs/common': 9.2.1_mnr6j2del53muneqly5h4y27ai
+      '@nestjs/core': 9.2.1_pwdo3q3a7waqiisplezqjzetmq
+      '@nestjs/microservices': 9.2.1_fyic65utxiftcghm7bf7rrj4z4
       reflect-metadata: 0.1.13
-      rxjs: 7.5.7
+      rxjs: 7.8.0
     devDependencies:
-      '@doubleshot/builder': 0.0.6_zwnkbkg2vxy5v3zjeyky5nlrs4
-      '@types/node': 18.11.9
+      '@doubleshot/builder': 0.0.6_4gl47vbnwavah233mclplcq6wi
+      '@types/node': 18.11.17
       electron: 22.0.0
       electron-builder: 23.6.0
-      typescript: 4.9.3
+      typescript: 4.9.4
 
   packages/frontend:
     specifiers:
@@ -82,7 +82,7 @@ packages:
       ajv-keywords: 3.5.2_ajv@6.12.6
     dev: true
 
-  /@doubleshot/builder/0.0.6_zwnkbkg2vxy5v3zjeyky5nlrs4:
+  /@doubleshot/builder/0.0.6_4gl47vbnwavah233mclplcq6wi:
     resolution: {integrity: sha512-8xB6JTl/MewDtLULPia/0kOStzJy3QjAYG+zE2+toCwTAaGixLQ6Bgn8VQg62FCThPrLtJVbX2D7O19/aYe82g==}
     engines: {node: '>=14.0.0'}
     hasBin: true
@@ -105,7 +105,7 @@ packages:
       esbuild: 0.15.6
       joycon: 3.1.1
       resolve-from: 5.0.0
-      tsup: 6.2.1_e2jtcei7tj25fra5mbop62ikby
+      tsup: 6.2.1_v2x67zppf6kacotwgbahiah7eq
       wait-on: 6.0.1
     transitivePeerDependencies:
       - debug
@@ -122,8 +122,8 @@ packages:
       '@nestjs/microservices': '>=6.0.0'
       electron: '>=16.0.0'
     dependencies:
-      '@nestjs/common': 9.2.1_yzt46al3aifnexifjjdb4dxxja
-      '@nestjs/microservices': 9.2.1_4lvhvnmmva5aaajgnpoz6utxby
+      '@nestjs/common': 9.2.1_mnr6j2del53muneqly5h4y27ai
+      '@nestjs/microservices': 9.2.1_fyic65utxiftcghm7bf7rrj4z4
       electron: 22.0.0
     dev: false
 
@@ -234,7 +234,7 @@ packages:
       - supports-color
     dev: true
 
-  /@nestjs/common/9.2.1_yzt46al3aifnexifjjdb4dxxja:
+  /@nestjs/common/9.2.1_mnr6j2del53muneqly5h4y27ai:
     resolution: {integrity: sha512-nZuo3oDsSSlC5mti/M2aCWTEIfHPGDXmBwWgPeCpRbrNz3IWd109rkajll+yxgidVjznAdBS9y00JkAVJblNYw==}
     peerDependencies:
       cache-manager: <=5
@@ -252,12 +252,12 @@ packages:
     dependencies:
       iterare: 1.2.1
       reflect-metadata: 0.1.13
-      rxjs: 7.5.7
+      rxjs: 7.8.0
       tslib: 2.4.1
       uuid: 9.0.0
     dev: false
 
-  /@nestjs/core/9.2.1_ryn35c7ur6lmhhqnj6cojrii7i:
+  /@nestjs/core/9.2.1_pwdo3q3a7waqiisplezqjzetmq:
     resolution: {integrity: sha512-a9GkXuu8uXgNgCVW+17iI8kLCltO+HwHpU2IhR+32JKnN2WEQ1YEWU4t3GJ2MNq44YkjIw9zrKvFkjJBlYrNbQ==}
     requiresBuild: true
     peerDependencies:
@@ -275,22 +275,22 @@ packages:
       '@nestjs/websockets':
         optional: true
     dependencies:
-      '@nestjs/common': 9.2.1_yzt46al3aifnexifjjdb4dxxja
-      '@nestjs/microservices': 9.2.1_4lvhvnmmva5aaajgnpoz6utxby
+      '@nestjs/common': 9.2.1_mnr6j2del53muneqly5h4y27ai
+      '@nestjs/microservices': 9.2.1_fyic65utxiftcghm7bf7rrj4z4
       '@nuxtjs/opencollective': 0.3.2
       fast-safe-stringify: 2.1.1
       iterare: 1.2.1
       object-hash: 3.0.0
       path-to-regexp: 3.2.0
       reflect-metadata: 0.1.13
-      rxjs: 7.5.7
+      rxjs: 7.8.0
       tslib: 2.4.1
       uuid: 9.0.0
     transitivePeerDependencies:
       - encoding
     dev: false
 
-  /@nestjs/microservices/9.2.1_4lvhvnmmva5aaajgnpoz6utxby:
+  /@nestjs/microservices/9.2.1_fyic65utxiftcghm7bf7rrj4z4:
     resolution: {integrity: sha512-ve4dqgoIaUG9VtinHHGCvf6SvtPjd3I44Mj8z8mSkcB8BEPfJnf4FNOShFBgsedtxLaiZyjpv8NCLcNVv5KKGg==}
     peerDependencies:
       '@grpc/grpc-js': '*'
@@ -326,11 +326,11 @@ packages:
       nats:
         optional: true
     dependencies:
-      '@nestjs/common': 9.2.1_yzt46al3aifnexifjjdb4dxxja
-      '@nestjs/core': 9.2.1_ryn35c7ur6lmhhqnj6cojrii7i
+      '@nestjs/common': 9.2.1_mnr6j2del53muneqly5h4y27ai
+      '@nestjs/core': 9.2.1_pwdo3q3a7waqiisplezqjzetmq
       iterare: 1.2.1
       reflect-metadata: 0.1.13
-      rxjs: 7.5.7
+      rxjs: 7.8.0
       tslib: 2.4.1
     dev: false
 
@@ -539,7 +539,7 @@ packages:
     dependencies:
       '@types/http-cache-semantics': 4.0.1
       '@types/keyv': 3.1.4
-      '@types/node': 18.11.9
+      '@types/node': 18.11.17
       '@types/responselike': 1.0.0
 
   /@types/debug/4.1.7:
@@ -551,7 +551,7 @@ packages:
   /@types/fs-extra/9.0.13:
     resolution: {integrity: sha512-nEnwB++1u5lVDM2UI4c1+5R+FYaKfaAzS4OococimjVm3nQw3TuzH5UNsocrcTBbhnerblyHj4A49qXbIiZdpA==}
     dependencies:
-      '@types/node': 18.11.9
+      '@types/node': 18.11.17
     dev: true
 
   /@types/glob/7.2.0:
@@ -559,7 +559,7 @@ packages:
     requiresBuild: true
     dependencies:
       '@types/minimatch': 3.0.5
-      '@types/node': 18.11.9
+      '@types/node': 18.11.17
     dev: true
     optional: true
 
@@ -569,7 +569,7 @@ packages:
   /@types/keyv/3.1.4:
     resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
     dependencies:
-      '@types/node': 18.11.9
+      '@types/node': 18.11.17
 
   /@types/minimatch/3.0.5:
     resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
@@ -583,14 +583,14 @@ packages:
   /@types/node/16.11.45:
     resolution: {integrity: sha512-3rKg/L5x0rofKuuUt5zlXzOnKyIHXmIu5R8A0TuNDMF2062/AOIDBciFIjToLEJ/9F9DzkHNot+BpNsMI1OLdQ==}
 
-  /@types/node/18.11.9:
-    resolution: {integrity: sha512-CRpX21/kGdzjOpFsZSkcrXMGIBWMGNIHXXBVFSH+ggkftxg+XYP20TESbh+zFvFj3EQOl5byk0HTRn1IL6hbqg==}
+  /@types/node/18.11.17:
+    resolution: {integrity: sha512-HJSUJmni4BeDHhfzn6nF0sVmd1SMezP7/4F0Lq+aXzmp2xm9O7WXrUtHW/CHlYVtZUbByEvWidHqRtcJXGF2Ng==}
 
   /@types/plist/3.0.2:
     resolution: {integrity: sha512-ULqvZNGMv0zRFvqn8/4LSPtnmN4MfhlPNtJCTpKuIIxGVGZ2rYWzFXrvEBoh9CVyqSE7D6YFRJ1hydLHI6kbWw==}
     requiresBuild: true
     dependencies:
-      '@types/node': 18.11.9
+      '@types/node': 18.11.17
       xmlbuilder: 15.1.1
     dev: true
     optional: true
@@ -598,7 +598,7 @@ packages:
   /@types/responselike/1.0.0:
     resolution: {integrity: sha512-85Y2BjiufFzaMIlvJDvTTB8Fxl2xfLo4HgmHzVBz08w4wDePCTjYw66PdrolO0kzli3yam/YCgRufyo1DdQVTA==}
     dependencies:
-      '@types/node': 18.11.9
+      '@types/node': 18.11.17
 
   /@types/verror/1.10.6:
     resolution: {integrity: sha512-NNm+gdePAX1VGvPcGZCDKQZKYSiAWigKhKaz5KF94hG6f2s8de9Ow5+7AbXoeKxL8gavZfk4UquSAygOF2duEQ==}
@@ -620,7 +620,7 @@ packages:
     resolution: {integrity: sha512-Cn6WYCm0tXv8p6k+A8PvbDG763EDpBoTzHdA+Q/MF6H3sapGjCm9NzoaJncJS9tUKSuCoDs9XHxYYsQDgxR6kw==}
     requiresBuild: true
     dependencies:
-      '@types/node': 18.11.9
+      '@types/node': 18.11.17
     optional: true
 
   /@vitejs/plugin-vue/3.2.0_vite@3.2.4+vue@3.2.45:
@@ -1183,7 +1183,7 @@ packages:
       chalk: 4.1.2
       date-fns: 2.28.0
       lodash: 4.17.21
-      rxjs: 7.5.7
+      rxjs: 7.8.0
       shell-quote: 1.7.3
       spawn-command: 0.0.2-1
       supports-color: 8.1.1
@@ -3002,10 +3002,10 @@ packages:
       queue-microtask: 1.2.3
     dev: true
 
-  /rxjs/7.5.7:
-    resolution: {integrity: sha512-z9MzKh/UcOqB3i20H6rtrlaE/CgjLOvheWK/9ILrbhROGTweAi1BaFsTT9FbwZi5Trr1qNRs+MXkhmR06awzQA==}
+  /rxjs/7.8.0:
+    resolution: {integrity: sha512-F2+gxDshqmIub1KdvZkaEfGDwLNpPvk9Fs6LD/MyQxNgMds/WH9OdDDXOmxUZpME+iSK3rQCctkL0DYyytUqMg==}
     dependencies:
-      tslib: 2.4.0
+      tslib: 2.4.1
 
   /safer-buffer/2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
@@ -3277,14 +3277,10 @@ packages:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
     dev: true
 
-  /tslib/2.4.0:
-    resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
-
   /tslib/2.4.1:
     resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
-    dev: false
 
-  /tsup/6.2.1_e2jtcei7tj25fra5mbop62ikby:
+  /tsup/6.2.1_v2x67zppf6kacotwgbahiah7eq:
     resolution: {integrity: sha512-KhBhCqVA3bHrIWhkcqTUA7R69H05IcBlHEtCVLEu42XDGUzz+bDqCcfu5PwpkKJ8DqK5tpdgM/qmyk4DdUbkZw==}
     engines: {node: '>=14'}
     hasBin: true
@@ -3315,7 +3311,7 @@ packages:
       source-map: 0.8.0-beta.0
       sucrase: 3.24.0
       tree-kill: 1.2.2
-      typescript: 4.9.3
+      typescript: 4.9.4
     transitivePeerDependencies:
       - supports-color
       - ts-node
@@ -3328,6 +3324,12 @@ packages:
 
   /typescript/4.9.3:
     resolution: {integrity: sha512-CIfGzTelbKNEnLpLdGFgdyKhG23CKdKgQPOBc+OUNrkJ2vr+KSzsSV5kq5iWhEQbok+quxgGzrAtGWCyU7tHnA==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: true
+
+  /typescript/4.9.4:
+    resolution: {integrity: sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==}
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
@@ -3437,7 +3439,7 @@ packages:
       joi: 17.6.0
       lodash: 4.17.21
       minimist: 1.2.6
-      rxjs: 7.5.7
+      rxjs: 7.8.0
     transitivePeerDependencies:
       - debug
     dev: true
