@@ -7,6 +7,6 @@
     "build": "rimraf dist && dsr build"
   },
   "devDependencies": {
-    "@doubleshot/runner": "0.0.1"
+    "@doubleshot/runner": "^0.0.2"
   }
 }

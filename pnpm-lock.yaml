@@ -4,9 +4,9 @@ importers:
 
   .:
     specifiers:
-      '@doubleshot/runner': 0.0.1
+      '@doubleshot/runner': ^0.0.2
     devDependencies:
-      '@doubleshot/runner': 0.0.1
+      '@doubleshot/runner': 0.0.2
 
   packages/backend:
     specifiers:
@@ -127,8 +127,8 @@ packages:
       electron: 22.0.0
     dev: false
 
-  /@doubleshot/runner/0.0.1:
-    resolution: {integrity: sha512-4jrCC9DPPkynGHE56XVDA8tgMRH8asfo6XRAvbWVbUAWYZDN5uEGa0j7xW9uciZh2vQwBylvSeSDLGoZJvjr+Q==}
+  /@doubleshot/runner/0.0.2:
+    resolution: {integrity: sha512-H/ogeGWAH5T6lA/Y289VkgybW6sv2hEck2XKJAJ+b+57frzG1RhaKnqsfn0/MUMQO/o5QkECiIPiYp7CDvFUTA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     peerDependencies:
@@ -137,12 +137,12 @@ packages:
       electron-builder:
         optional: true
     dependencies:
-      bundle-require: 3.0.4_esbuild@0.15.6
+      bundle-require: 3.0.4_esbuild@0.16.10
       cac: 6.7.12
       check-package-exists: 1.1.0
       colorette: 2.0.19
-      concurrently: 7.3.0
-      esbuild: 0.15.6
+      concurrently: 7.6.0
+      esbuild: 0.16.10
       joycon: 3.1.1
       resolve-from: 5.0.0
     dev: true
@@ -1216,6 +1216,16 @@ packages:
       load-tsconfig: 0.2.3
     dev: true
 
+  /bundle-require/3.0.4_esbuild@0.16.10:
+    resolution: {integrity: sha512-VXG6epB1yrLAvWVQpl92qF347/UXmncQj7J3U8kZEbdVZ1ZkQyr4hYeL/9RvcE8vVVdp53dY78Fd/3pqfRqI1A==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    peerDependencies:
+      esbuild: '>=0.13'
+    dependencies:
+      esbuild: 0.16.10
+      load-tsconfig: 0.2.3
+    dev: true
+
   /cac/6.7.12:
     resolution: {integrity: sha512-rM7E2ygtMkJqD9c7WnFU6fruFcN3xe4FM5yUmgxhZzIKJk4uHl9U/fhwdajGFQbQuv43FAUo1Fe8gX/oIKDeSA==}
     engines: {node: '>=8'}
@@ -1355,16 +1365,16 @@ packages:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: true
 
-  /concurrently/7.3.0:
-    resolution: {integrity: sha512-IiDwm+8DOcFEInca494A8V402tNTQlJaYq78RF2rijOrKEk/AOHTxhN4U1cp7GYKYX5Q6Ymh1dLTBlzIMN0ikA==}
+  /concurrently/7.6.0:
+    resolution: {integrity: sha512-BKtRgvcJGeZ4XttiDiNcFiRlxoAeZOseqUvyYRUp/Vtd+9p1ULmeoSqGsDA+2ivdeDFpqrJvGvmI+StKfKl5hw==}
     engines: {node: ^12.20.0 || ^14.13.0 || >=16.0.0}
     hasBin: true
     dependencies:
       chalk: 4.1.2
-      date-fns: 2.28.0
+      date-fns: 2.29.3
       lodash: 4.17.21
       rxjs: 7.8.0
-      shell-quote: 1.7.3
+      shell-quote: 1.7.4
       spawn-command: 0.0.2-1
       supports-color: 8.1.1
       tree-kill: 1.2.2
@@ -1401,8 +1411,8 @@ packages:
   /csstype/2.6.20:
     resolution: {integrity: sha512-/WwNkdXfckNgw6S5R125rrW8ez139lBHWouiBvX8dfMFtcn6V81REDqnH7+CRpRipfYlyU1CmOnOxrmGcFOjeA==}
 
-  /date-fns/2.28.0:
-    resolution: {integrity: sha512-8d35hViGYx/QH0icHYCeLmsLmMUheMmTyV9Fcm6gvNwdw31yXXH+O85sOBJ+OLnLQMKZowvpKb6FgMIQjcpvQw==}
+  /date-fns/2.29.3:
+    resolution: {integrity: sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==}
     engines: {node: '>=0.11'}
     dev: true
 
@@ -3076,8 +3086,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /shell-quote/1.7.3:
-    resolution: {integrity: sha512-Vpfqwm4EnqGdlsBFNmHhxhElJYrdfcxPThu+ryKS5J8L/fhAwLazFZtq+S+TWZ9ANj2piSQLGj6NQg+lKPmxrw==}
+  /shell-quote/1.7.4:
+    resolution: {integrity: sha512-8o/QEhSSRb1a5i7TFR0iM4G16Z0vYB2OQVs4G3aAFXjn3T6yEx8AZxy1PgDF7I00LZHYA3WxaSYIf5e5sAX8Rw==}
     dev: true
 
   /signal-exit/3.0.7:
