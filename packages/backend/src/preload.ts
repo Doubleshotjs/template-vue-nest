@@ -1,7 +1,6 @@
 import { contextBridge, webFrame, ipcRenderer } from 'electron'
-import { IpcResponse } from '@doubleshot/nest-electron'
 
-function getDeviceScaleFactor(): Promise<IpcResponse<number>> {
+function getDeviceScaleFactor(): Promise<number> {
   return ipcRenderer.invoke("device-scale-factor")
 }
 
@@ -17,7 +16,7 @@ contextBridge.exposeInMainWorld(
       const update = async () => {
         const height = window.innerHeight
         const dpr = window.devicePixelRatio
-        if (scaleFactor === 0) scaleFactor = (await getDeviceScaleFactor()).data
+        if (scaleFactor === 0) scaleFactor = await getDeviceScaleFactor()
 
         const factor = (height / DESIGN_HEIGHT) * (dpr / DESIGN_DPR) * (DESIGN_SCALE_FACTOR / scaleFactor)
         webFrame.setZoomFactor(factor)
@@ -27,7 +26,7 @@ contextBridge.exposeInMainWorld(
         update
       }
     },
-    saveImageToFile: (image: string): Promise<IpcResponse<any>> => ipcRenderer.invoke("save-image", image),
+    saveImageToFile: (image: string): Promise<any> => ipcRenderer.invoke("save-image", image),
   },
 )
 

@@ -100,7 +100,7 @@ const THICKNESSES = [4, 12, 24, 48, 128]
 const changeThickness = (thickness: number) => (selectedThickness = thickness)
 
 const clearCanvas = () => {
-  const ctx = drawPad.getContext('2d')
+  const ctx = drawPad?.getContext('2d')
   if (!ctx) return
 
   ctx.fillStyle = '#fff'
@@ -126,13 +126,9 @@ const saveImage = () => {
   <div class="paint">
     <img class="logo" :src="logo" alt="Doubleshot Logo" />
     <nav class="thickness-bar">
-      <div
-        v-for="(thickness, i) in THICKNESSES"
-        :key="thickness"
-        :class="['thickness', { active: thickness === selectedThickness }]"
-        :style="`--size-rate: ${i + 1}`"
-        @click="changeThickness(thickness)"
-      ></div>
+      <div v-for="(thickness, i) in THICKNESSES" :key="thickness"
+        :class="['thickness', { active: thickness === selectedThickness }]" :style="`--size-rate: ${i + 1}`"
+        @click="changeThickness(thickness)"></div>
 
       <div class="button-in-thickness" @click="clearCanvas">
         <IconClear />
@@ -142,13 +138,8 @@ const saveImage = () => {
     <canvas ref="drawPad" class="pad"></canvas>
 
     <nav class="color-bar">
-      <div
-        v-for="color in COLORS"
-        :key="color"
-        :class="['color', { active: color === selectedColor }]"
-        :style="`--shadow-color: ${color + '99'};--point-color: ${color}`"
-        @click="changeColor(color)"
-      ></div>
+      <div v-for="color in COLORS" :key="color" :class="['color', { active: color === selectedColor }]"
+        :style="`--shadow-color: ${color + '99'};--point-color: ${color}`" @click="changeColor(color)"></div>
     </nav>
 
     <div class="button-bar">
