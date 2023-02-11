@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "dsr dev",
+    "debug": "dsr debug",
     "build": "rimraf dist && dsr build"
   },
   "devDependencies": {

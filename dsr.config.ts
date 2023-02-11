@@ -8,6 +8,7 @@ export default defineConfig({
       prefixColor: 'blue',
       commands: {
         dev: 'npm run dev',
+        debug: 'npm run debug',
         build: 'npm run build'
       }
     },
@@ -19,6 +20,10 @@ export default defineConfig({
         dev: {
           command: 'npm run dev',
           killOthersWhenExit: true
+        },
+        debug: {
+          command: 'npm run debug',
+          killOthersWhenExit: true,
         },
         build: 'npm run build'
       }

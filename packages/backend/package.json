@@ -5,6 +5,7 @@
   "main": "backend/main.js",
   "scripts": {
     "dev": "dsb dev -t electron",
+    "debug": "dsb dev -t electron --debug",
     "build": "dsb build -t electron"
   },
   "dependencies": {
