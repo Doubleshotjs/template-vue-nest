@@ -1,4 +1,4 @@
-import { defineConfig } from "@doubleshot/runner"
+import { defineConfig } from '@doubleshot/runner';
 
 export default defineConfig({
   run: [
@@ -9,8 +9,9 @@ export default defineConfig({
       commands: {
         dev: 'npm run dev',
         debug: 'npm run debug',
-        build: 'npm run build'
-      }
+        build: 'npm run build',
+        lint: 'npm run lint',
+      },
     },
     {
       cwd: 'packages/backend',
@@ -19,19 +20,20 @@ export default defineConfig({
       commands: {
         dev: {
           command: 'npm run dev',
-          killOthersWhenExit: true
+          killOthersWhenExit: true,
         },
         debug: {
           command: 'npm run debug',
           killOthersWhenExit: true,
         },
-        build: 'npm run build'
-      }
-    }
+        build: 'npm run build',
+        lint: 'npm run lint',
+      },
+    },
   ],
   electronBuild: {
     projectDir: 'packages/backend',
     commandName: 'build',
-    config: 'electron-builder.config.js'
-  }
-})
+    config: 'electron-builder.config.js',
+  },
+});

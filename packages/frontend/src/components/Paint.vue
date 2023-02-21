@@ -2,144 +2,156 @@
 /**
  * modified from https://codepen.io/Lewitje/pen/dXpRmm
  */
-import { watch } from 'vue'
-import { IconClear, IconSave, IconDoc, IconGithub } from './Icons'
-import logo from '../assets/logo.png'
+import { watch } from 'vue';
+import logo from '../assets/logo.png';
+import { IconClear, IconDoc, IconGithub, IconSave } from './Icons';
 
-const PAD_WIDTH = 1800
-const PAD_HEIGHT = 1200
-let selectedColor = $ref('#1abc9c')
-let selectedThickness = $ref(24)
-let isPressed = false
+const PAD_WIDTH = 1800;
+const PAD_HEIGHT = 1200;
+let selectedColor = $ref('#1abc9c');
+let selectedThickness = $ref(24);
+let isPressed = false;
 
-const drawPad = $ref<HTMLCanvasElement>()
+const drawPad = $ref<HTMLCanvasElement>();
 watch(
   () => drawPad,
   (c) => {
-    if (!c) return
+    if (!c) {
+      return;
+    }
 
-    const ctx = c.getContext('2d')
-    if (!ctx) return
+    const ctx = c.getContext('2d');
+    if (!ctx) {
+      return;
+    }
 
-    ctx.fillStyle = '#fff'
-    ctx.fillRect(0, 0, c.width, c.height)
+    ctx.fillStyle = '#fff';
+    ctx.fillRect(0, 0, c.width, c.height);
 
-    c.width = PAD_WIDTH
-    c.height = PAD_HEIGHT
+    c.width = PAD_WIDTH;
+    c.height = PAD_HEIGHT;
 
     c.addEventListener('mousemove', (e) => {
-      let x = e.offsetX * 2
-      let y = e.offsetY * 2
+      const x = e.offsetX * 2;
+      const y = e.offsetY * 2;
 
       if (isPressed && ctx) {
-        ctx.lineWidth = selectedThickness
-        ctx.strokeStyle = selectedColor
-        ctx.lineCap = 'round'
-        ctx.lineJoin = 'round'
-        ctx.lineTo(x, y)
-        ctx.stroke()
+        ctx.lineWidth = selectedThickness;
+        ctx.strokeStyle = selectedColor;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        ctx.lineTo(x, y);
+        ctx.stroke();
       }
-    })
+    });
 
     c.addEventListener('mousedown', (e) => {
-      ctx.beginPath()
-      ctx.moveTo(e.offsetX * 2, e.offsetY * 2)
-      isPressed = true
-    })
+      ctx.beginPath();
+      ctx.moveTo(e.offsetX * 2, e.offsetY * 2);
+      isPressed = true;
+    });
 
     c.addEventListener('mouseup', () => {
-      isPressed = false
-      ctx.closePath()
-    })
+      isPressed = false;
+      ctx.closePath();
+    });
 
     c.addEventListener('mouseleave', () => {
-      isPressed = false
-      ctx.closePath()
-    })
+      isPressed = false;
+      ctx.closePath();
+    });
 
     // Hi!
-    ctx.lineWidth = 48
-    ctx.strokeStyle = '#24b574'
-    ctx.lineCap = 'round'
-    ctx.lineJoin = 'round'
-    ctx.beginPath()
-    ctx.moveTo(600, 350)
-    ctx.lineTo(640, 800)
+    ctx.lineWidth = 48;
+    ctx.strokeStyle = '#24b574';
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    ctx.beginPath();
+    ctx.moveTo(600, 350);
+    ctx.lineTo(640, 800);
 
-    ctx.moveTo(600, 600)
-    ctx.lineTo(800, 580)
+    ctx.moveTo(600, 600);
+    ctx.lineTo(800, 580);
 
-    ctx.moveTo(800, 350)
-    ctx.lineTo(840, 800)
+    ctx.moveTo(800, 350);
+    ctx.lineTo(840, 800);
 
-    ctx.moveTo(1010, 500)
-    ctx.lineTo(1000, 800)
+    ctx.moveTo(1010, 500);
+    ctx.lineTo(1000, 800);
 
-    ctx.moveTo(1010, 310)
-    ctx.lineTo(1010, 340)
+    ctx.moveTo(1010, 310);
+    ctx.lineTo(1010, 340);
 
-    ctx.moveTo(1210, 310)
-    ctx.lineTo(1200, 640)
+    ctx.moveTo(1210, 310);
+    ctx.lineTo(1200, 640);
 
-    ctx.moveTo(1225, 720)
-    ctx.lineTo(1180, 820)
+    ctx.moveTo(1225, 720);
+    ctx.lineTo(1180, 820);
 
-    ctx.moveTo(1170, 730)
-    ctx.lineTo(1240, 820)
+    ctx.moveTo(1170, 730);
+    ctx.lineTo(1240, 820);
 
-    ctx.closePath()
+    ctx.closePath();
 
-    ctx.stroke()
-  }
-)
+    ctx.stroke();
+  },
+);
 
-const COLORS = ['#9b59b6', '#3498db', '#2ecc71', '#1abc9c', '#f1c40f', '#e67e22', '#E73C61']
-const changeColor = (color: string) => (selectedColor = color)
+const COLORS = ['#9b59b6', '#3498db', '#2ecc71', '#1abc9c', '#f1c40f', '#e67e22', '#E73C61'];
+const changeColor = (color: string) => (selectedColor = color);
 
-const THICKNESSES = [4, 12, 24, 48, 128]
-const changeThickness = (thickness: number) => (selectedThickness = thickness)
+const THICKNESSES = [4, 12, 24, 48, 128];
+const changeThickness = (thickness: number) => (selectedThickness = thickness);
 
 const clearCanvas = () => {
-  const ctx = drawPad?.getContext('2d')
-  if (!ctx) return
+  const ctx = drawPad?.getContext('2d');
+  if (!ctx) {
+    return;
+  }
 
-  ctx.fillStyle = '#fff'
-  ctx.fillRect(0, 0, PAD_WIDTH, PAD_HEIGHT)
-}
+  ctx.fillStyle = '#fff';
+  ctx.fillRect(0, 0, PAD_WIDTH, PAD_HEIGHT);
+};
 
 const saveImage = () => {
-  if (!drawPad) return
-
-  const img = drawPad.toDataURL('image/png')
-  if (window.isElectron) {
-    window.electron.saveImageToFile(img)
-  } else {
-    const a = document.createElement('a')
-    a.href = img
-    a.download = 'paint.png'
-    a.click()
+  if (!drawPad) {
+    return;
   }
-}
+
+  const img = drawPad.toDataURL('image/png');
+  if (window.isElectron) {
+    window.electron.saveImageToFile(img);
+  } else {
+    const a = document.createElement('a');
+    a.href = img;
+    a.download = 'paint.png';
+    a.click();
+  }
+};
 </script>
 
 <template>
   <div class="paint">
     <img class="logo" :src="logo" alt="Doubleshot Logo" />
     <nav class="thickness-bar">
-      <div v-for="(thickness, i) in THICKNESSES" :key="thickness"
-        :class="['thickness', { active: thickness === selectedThickness }]" :style="`--size-rate: ${i + 1}`"
-        @click="changeThickness(thickness)"></div>
+      <div
+        v-for="(thickness, i) in THICKNESSES" :key="thickness"
+        class="thickness" :class="[{ active: thickness === selectedThickness }]" :style="`--size-rate: ${i + 1}`"
+        @click="changeThickness(thickness)"
+      />
 
       <div class="button-in-thickness" @click="clearCanvas">
         <IconClear />
       </div>
     </nav>
 
-    <canvas ref="drawPad" class="pad"></canvas>
+    <canvas ref="drawPad" class="pad" />
 
     <nav class="color-bar">
-      <div v-for="color in COLORS" :key="color" :class="['color', { active: color === selectedColor }]"
-        :style="`--shadow-color: ${color + '99'};--point-color: ${color}`" @click="changeColor(color)"></div>
+      <div
+        v-for="color in COLORS" :key="color" class="color" :class="[{ active: color === selectedColor }]"
+        :style="`--shadow-color: ${`${color}99`};--point-color: ${color}`" @click="changeColor(color)"
+      />
     </nav>
 
     <div class="button-bar">
@@ -171,21 +183,21 @@ const saveImage = () => {
   position: absolute;
   height: 100px;
   transform: translate(-50%, -50%);
-  top: calc((100% - v-bind('PAD_HEIGHT / 2 + "px"')) / 4);
+  top: calc((100% - v-bind('`${PAD_HEIGHT / 2}px`')) / 4);
   left: 50%;
 }
 
 .pad {
   flex: 1 1 0%;
-  width: v-bind('PAD_WIDTH / 2 + "px"');
-  height: v-bind('PAD_HEIGHT / 2 + "px"');
+  width: v-bind('`${PAD_WIDTH / 2}px`');
+  height: v-bind('`${PAD_HEIGHT / 2}px`');
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   background-color: white;
 }
 
 .thickness-bar {
-  width: calc(50% - v-bind('PAD_WIDTH / 4 + "px"'));
+  width: calc(50% - v-bind('`${PAD_WIDTH / 4}px`'));
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -245,7 +257,7 @@ const saveImage = () => {
 }
 
 .color-bar {
-  width: calc(50% - v-bind('PAD_WIDTH / 4 + "px"'));
+  width: calc(50% - v-bind('`${PAD_WIDTH / 4}px`'));
   display: flex;
   flex-direction: column;
 }
@@ -273,10 +285,10 @@ const saveImage = () => {
 
 .button-bar {
   position: absolute;
-  width: v-bind('PAD_WIDTH / 2 + "px"');
+  width: v-bind('`${PAD_WIDTH / 2}px`');
   height: 100px;
   transform: translate(-50%, 50%);
-  bottom: calc((100% - v-bind('PAD_HEIGHT / 2 + "px"')) / 4);
+  bottom: calc((100% - v-bind('`${PAD_HEIGHT / 2}px`')) / 4);
   left: 50%;
 
   display: grid;
@@ -286,7 +298,7 @@ const saveImage = () => {
 }
 
 .button {
-  width: v-bind('PAD_WIDTH / 6 - 40 + "px"');
+  width: v-bind('`${PAD_WIDTH / 6 - 40}px`');
   height: 60px;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.1);

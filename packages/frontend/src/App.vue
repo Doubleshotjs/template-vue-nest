@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import Paint from './components/Paint.vue'
+import Paint from './components/Paint.vue';
 
 if (window.isElectron) {
-  const { useZoomFactor } = window.electron
-  const { update: updateZoomFactor } = useZoomFactor()
+  const { useZoomFactor } = window.electron;
+  const { update: updateZoomFactor } = useZoomFactor();
 
   setTimeout(() => {
-    updateZoomFactor()
+    updateZoomFactor();
   }, 200);
 
   window.addEventListener('resize', () => {
-    updateZoomFactor()
-  })
+    updateZoomFactor();
+  });
 }
 </script>
 

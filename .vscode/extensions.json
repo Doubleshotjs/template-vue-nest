@@ -1,3 +1,16 @@
 {
-  "recommendations": ["Vue.volar"]
+  "recommendations": [
+    "Vue.volar",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "EditorConfig.EditorConfig",
+    "donjayamanne.githistory",
+    "christian-kohler.path-intellisense",
+    "sibiraj-s.vscode-scss-formatter",
+    "stylelint.vscode-stylelint",
+    "bradlc.vscode-tailwindcss",
+    "Vue.vscode-typescript-vue-plugin",
+    "redhat.vscode-yaml",
+    "lokalise.i18n-ally"
+  ]
 }

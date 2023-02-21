@@ -5,9 +5,17 @@
   "scripts": {
     "dev": "dsr dev",
     "debug": "dsr debug",
-    "build": "rimraf dist && dsr build"
+    "build": "rimraf dist && dsr build",
+    "lint": "dsr lint"
   },
   "devDependencies": {
-    "@doubleshot/runner": "^0.0.5"
+    "@antfu/eslint-config": "^0.35.2",
+    "@doubleshot/runner": "^0.0.5",
+    "@types/node": "18.13.0",
+    "@typescript-eslint/parser": "^5.51.0",
+    "eslint": "^8.33.0",
+    "eslint-plugin-vue": "^9.4.0",
+    "lint-staged": "^13.1.1",
+    "typescript": "^4.9.5"
   }
 }

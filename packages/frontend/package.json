@@ -6,6 +6,7 @@
     "dev": "vite",
     "debug": "vite --debug",
     "build": "vue-tsc --noEmit && vite build",
+    "lint": "eslint --cache --max-warnings 0  \"src/**/*.{vue,js,jsx,ts,tsx}\" --fix",
     "preview": "vite preview"
   },
   "dependencies": {

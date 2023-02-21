@@ -6,10 +6,12 @@
   "scripts": {
     "dev": "dsb dev -t electron",
     "debug": "dsb dev -t electron --debug",
-    "build": "dsb build -t electron"
+    "build": "npm run build:icons && dsb build -t electron",
+    "build:icons": "rimraf resources/icons && electron-icon-builder --input=./resources/icon.png --output=./resources --flatten",
+    "lint": "eslint --cache --max-warnings 0  \"src/**/*.{vue,js,jsx,ts,tsx}\" --fix",
+    "postinstall": "electron-builder install-app-deps"
   },
   "dependencies": {
-    "@doubleshot/nest-electron": "0.1.0",
     "@nestjs/common": "^9.3.5",
     "@nestjs/core": "^9.3.5",
     "@nestjs/microservices": "^9.3.5",
@@ -21,6 +23,7 @@
     "@types/node": "18.13.0",
     "electron": "23.0.0",
     "electron-builder": "23.6.0",
+    "electron-icon-builder": "^2.0.1",
     "typescript": "4.9.5"
   }
 }

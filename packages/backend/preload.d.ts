@@ -1,9 +1,8 @@
+import type { ElectronIPC } from './src/preload';
+
 declare global {
   interface Window {
-    electron: {
-      useZoomFactor(): { update: () => Promise<void> }
-      saveImageToFile(image: string): Promise<any>
-    },
+    electron: ElectronIPC,
     isElectron: boolean
   }
 }
