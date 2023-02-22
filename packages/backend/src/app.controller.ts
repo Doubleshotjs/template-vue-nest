@@ -1,6 +1,7 @@
 import { Controller } from '@nestjs/common'
 import { IpcHandle } from '@doubleshot/nest-electron'
 import { AppService } from './app.service'
+import { Payload } from '@nestjs/microservices'
 
 @Controller()
 export class AppController {
@@ -14,7 +15,7 @@ export class AppController {
   }
 
   @IpcHandle('save-image')
-  saveImage(image: string) {
+  saveImage(@Payload() image: string) {
     return this.appService.saveImageToFile(image)
   }
 }
