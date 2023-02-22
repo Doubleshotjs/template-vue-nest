@@ -19,7 +19,7 @@ const electronIPC = {
       const height = window.innerHeight;
       const dpr = window.devicePixelRatio;
       if (scaleFactor === 0) {
-        scaleFactor = await invoke<number>('device-scale-factor');
+        scaleFactor = await invoke<number>('/prefix/device-scale-factor');
       }
 
       const factor = (height / DESIGN_HEIGHT) * (dpr / DESIGN_DPR) * (DESIGN_SCALE_FACTOR / scaleFactor);
@@ -30,7 +30,7 @@ const electronIPC = {
       update,
     };
   },
-  saveImageToFile: (image: string) => invoke<string>('save-image', { image }),
+  saveImageToFile: (image: string) => invoke<string>('/prefix/save-image', { image }),
 };
 
 contextBridge.exposeInMainWorld('electron', electronIPC);

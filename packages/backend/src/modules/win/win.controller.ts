@@ -1,22 +1,22 @@
 import { Controller } from '@nestjs/common';
-import { Ipc } from '@/electron';
+import { IpcOn } from '@doubleshot/nest-electron';
 import { WinService } from './win.service';
 
 @Controller()
 export class WinController {
   constructor(private readonly winService: WinService) { }
 
-  @Ipc('/win/close')
+  @IpcOn('/win/close')
   public close() {
     this.winService.close();
   }
 
-  @Ipc('/win/maximize')
+  @IpcOn('/win/maximize')
   public maximize() {
     this.winService.maximize();
   }
 
-  @Ipc('/win/minimize')
+  @IpcOn('/win/minimize')
   public minimize() {
     this.winService.minimize();
   }
