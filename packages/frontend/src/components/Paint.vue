@@ -2,19 +2,19 @@
 /**
  * modified from https://codepen.io/Lewitje/pen/dXpRmm
  */
-import { watch } from 'vue'
+import { watch, ref } from 'vue'
 import { IconClear, IconSave, IconDoc, IconGithub } from './Icons'
 import logo from '../assets/logo.png'
 
 const PAD_WIDTH = 1800
 const PAD_HEIGHT = 1200
-let selectedColor = $ref('#1abc9c')
-let selectedThickness = $ref(24)
+const selectedColor = ref('#1abc9c')
+const selectedThickness = ref(24)
 let isPressed = false
 
-const drawPad = $ref<HTMLCanvasElement>()
+const drawPad = ref<HTMLCanvasElement>()
 watch(
-  () => drawPad,
+  () => drawPad.value,
   (c) => {
     if (!c) return
 
@@ -32,8 +32,8 @@ watch(
       let y = e.offsetY * 2
 
       if (isPressed && ctx) {
-        ctx.lineWidth = selectedThickness
-        ctx.strokeStyle = selectedColor
+        ctx.lineWidth = selectedThickness.value
+        ctx.strokeStyle = selectedColor.value
         ctx.lineCap = 'round'
         ctx.lineJoin = 'round'
         ctx.lineTo(x, y)
@@ -94,13 +94,13 @@ watch(
 )
 
 const COLORS = ['#9b59b6', '#3498db', '#2ecc71', '#1abc9c', '#f1c40f', '#e67e22', '#E73C61']
-const changeColor = (color: string) => (selectedColor = color)
+const changeColor = (color: string) => (selectedColor.value = color)
 
 const THICKNESSES = [4, 12, 24, 48, 128]
-const changeThickness = (thickness: number) => (selectedThickness = thickness)
+const changeThickness = (thickness: number) => (selectedThickness.value = thickness)
 
 const clearCanvas = () => {
-  const ctx = drawPad?.getContext('2d')
+  const ctx = drawPad.value?.getContext('2d')
   if (!ctx) return
 
   ctx.fillStyle = '#fff'
@@ -108,9 +108,9 @@ const clearCanvas = () => {
 }
 
 const saveImage = () => {
-  if (!drawPad) return
+  if (!drawPad.value) return
 
-  const img = drawPad.toDataURL('image/png')
+  const img = drawPad.value.toDataURL('image/png')
   if (window.isElectron) {
     window.electron.saveImageToFile(img)
   } else {
