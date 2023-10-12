@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="200" src="https://github.com/Doubleshotjs/doubleshot/raw/main/DoubleShot.png" alt="DoubleShot logo">
+    <img width="800" src="./screenshot.png" alt="screenshot">
 </p>
 
 <br>
