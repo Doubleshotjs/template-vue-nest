@@ -4,7 +4,6 @@
  */
 import { watch, ref } from 'vue'
 import { IconClear, IconSave, IconDoc, IconGithub } from './Icons'
-import logo from '../assets/logo.png'
 
 const PAD_WIDTH = 1800
 const PAD_HEIGHT = 1200
@@ -124,7 +123,6 @@ const saveImage = () => {
 
 <template>
   <div class="paint">
-    <img class="logo" :src="logo" alt="Doubleshot Logo" />
     <nav class="thickness-bar">
       <div v-for="(thickness, i) in THICKNESSES" :key="thickness"
         :class="['thickness', { active: thickness === selectedThickness }]" :style="`--size-rate: ${i + 1}`"
@@ -165,14 +163,6 @@ const saveImage = () => {
   align-items: center;
   width: 100%;
   height: 100%;
-}
-
-.logo {
-  position: absolute;
-  height: 100px;
-  transform: translate(-50%, -50%);
-  top: calc((100% - v-bind('PAD_HEIGHT / 2 + "px"')) / 4);
-  left: 50%;
 }
 
 .pad {
