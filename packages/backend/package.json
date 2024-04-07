@@ -17,9 +17,9 @@
   },
   "devDependencies": {
     "@doubleshot/builder": "0.0.11",
-    "@types/node": "20.12.2",
-    "electron": "29.1.6",
+    "@types/node": "20.12.5",
+    "electron": "29.2.0",
     "electron-builder": "24.13.3",
-    "typescript": "5.4.3"
+    "typescript": "5.4.4"
   }
 }
